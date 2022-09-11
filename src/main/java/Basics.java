@@ -43,6 +43,7 @@ public class Basics {
         /* TODO (Task 1): Write a line of code below that prints the string
          *                Hello World!
          */
+        System.out.println("Hello World!");
 
 
 
@@ -62,6 +63,7 @@ public class Basics {
          * TODO (Task 2): Create a variable named my_variable and assign it the
          *                value 100.
          */
+        int my_variable = 100;
 
 
 
@@ -99,7 +101,11 @@ public class Basics {
          * Current count: 1
          * Current count: 0
          */
+        for (int i = 0; i <= 10; i++) {
+            int current = 10 - i;
+            System.out.println("Current count: " + current);
 
+        }
 
     }
 
@@ -144,6 +150,14 @@ public class Basics {
 
         // Fill in the rest of the body here
 
+        String[] words;
+        words = to_split.split("\\s+", 7);
+
+        for (int i = 0; i <= 6; i++) {
+            String current = words[i];
+            char first = current.charAt(0);
+            ret.append(first);
+        }
         return ret.toString();
     }
 
@@ -170,6 +184,11 @@ public class Basics {
          *                You can index into arrays as we do in Python
          *                (e.g. arr[i] gives you the item at index i).
          */
+
+        int len = arr.length;
+        for (int i = 1; i < len; i = i + 2) {
+            current_sum = current_sum + arr[i];
+        }
 
         return current_sum;
     }
